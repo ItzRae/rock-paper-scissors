@@ -1,0 +1,49 @@
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #677798;
+    color: #997966;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin: 50px 0;
+    color: white;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.player, .computer {
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #EDF2F3;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.player {
+    box-shadow: -10px 10px 8px #354458;
+}
+
+.section-title {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.computer {
+    box-shadow: 10px 10px 8px #354458;
+
+}
