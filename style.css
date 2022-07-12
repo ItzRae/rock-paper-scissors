@@ -68,6 +68,7 @@ body {
     transition: 0.5s;
 }
 
+
 img {
     padding-top: 20px;
     width: 100px;
@@ -77,6 +78,15 @@ img {
 }
 
 
-section-info:hover {
+.section-info:hover {
     transform: scale(1.05);
+    background-color: #ced0d8df;
+}
+
+.section-info:active {
+    background-color: #c88989;
+    color: white;
+    transform: translateY(4px);
+    box-shadow: 5px 5px #666;
+
 }
