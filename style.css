@@ -3,6 +3,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #677798;
     color: #997966;
+    font-size: 16px;
 }
 
 .title {
@@ -46,4 +47,36 @@ body {
 .computer {
     box-shadow: 10px 10px 8px #354458;
 
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 0 15px 0;
+}
+
+.section-info {
+    border: 2px solid #677798;
+    border-radius: 4px;
+    box-shadow: 3px 3px #354458;
+    width: 90px;
+    height: 130px;
+    padding-top: 15px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+img {
+    padding-top: 20px;
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 -30px 0 -30px;
+}
+
+
+section-info:hover {
+    transform: scale(1.05);
 }

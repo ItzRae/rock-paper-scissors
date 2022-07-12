@@ -22,7 +22,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    pass;
+    console.log("done");
 }
 
 function game() {
@@ -30,5 +30,6 @@ function game() {
         playRound();
     }
 }
+
 
 console.log(computerPlay());
