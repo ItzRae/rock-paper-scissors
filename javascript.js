@@ -18,17 +18,32 @@ function computerPlay() {
         case 2:
             return "scissors";
     }
-
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log("done");
+    console.log(playerSelection);
+    console.log(computerSelection);
+    if (playerSelection == "scissors" && computerSelection == "scissors"
+    || playerSelection == "rock" && computerSelection == "rock"
+    || playerSelection == "paper" && computerSelection == "paper") {
+        console.log("tie");
+    }
+    else if (playerSelection == "paper" && computerSelection == "scissors"
+    || playerSelection == "rock" && computerSelection == "paper"
+    || playerSelection == "scissors" && computerSelection == "rock") {
+        console.log("comp win");
+    }
+    else if (playerSelection == "rock" && computerSelection == "scissors"
+    || playerSelection == "scissors" && computerSelection == "paper"
+    || playerSelection == "paper" && computerSelection == "rock") {
+        console.log("player win!!!!!!");    
+    }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound();
-    }
+function game(id) {
+    let userChoice = id;
+    playRound(userChoice, computerPlay());
+
 }
 
 
