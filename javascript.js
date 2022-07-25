@@ -8,7 +8,9 @@
 
 let playerScore = 0;
 let computerScore = 0;
-const WINS = 5;
+let gameIsOver = false;
+
+
 
 function computerPlay() {
     let random = Math.floor(Math.random() * 3);
@@ -26,20 +28,13 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    if (playerScore == WINS) {
-        alert("GAME OVER: PLAYER WINS");
-        return;
-    }
-    else if (computerScore == WINS) {
-        alert("GAME OVER: COMPUTER WINS");
-        return;
-    }
 
     console.log(playerSelection);
     console.log(computerSelection);
     if (playerSelection == "scissors" && computerSelection == "scissors"
     || playerSelection == "rock" && computerSelection == "rock"
     || playerSelection == "paper" && computerSelection == "paper") {
+        document.getElementById("round").innerHTML = "Round: Tie!";
         console.log("tie");
     }
     else if (playerSelection == "paper" && computerSelection == "scissors"
@@ -47,31 +42,49 @@ function playRound(playerSelection, computerSelection) {
     || playerSelection == "scissors" && computerSelection == "rock") {
         console.log("comp win");
         computerScore++;
+        document.getElementById("round").innerHTML = "Round: Computer Wins!"
     }
     else if (playerSelection == "rock" && computerSelection == "scissors"
     || playerSelection == "scissors" && computerSelection == "paper"
     || playerSelection == "paper" && computerSelection == "rock") {
         console.log("player win!!!!!!");    
         playerScore++;
+        document.getElementById("round").innerHTML = "Round: Player Wins!"
     }
+
+    if (playerScore == 5){
+        gameOver("Player");
+    }
+    else if (computerScore == 5){
+        gameOver("Computer");
+    }
+
     console.log(playerScore);
     console.log(computerScore);
 }
 
-
+function displayLives() {
+    document.getElementById("player-score").innerHTML = `Score: ${playerScore}`;
+    document.getElementById("computer-score").innerHTML = `Score: ${computerScore}`;
+}
 
 window.onload = function() {
     playerScore = 0;
     computerScore = 0;
+    displayLives();
+}
+
+function gameOver(winner) {
+    gameOver = true;
+    alert(`GAME OVER! ${winner} wins!`);
+    document.location.reload();
+    return;
 }
 
 function game(id, playerScore, computerScore) {
     userChoice= id;
     playRound(userChoice, computerPlay());
-
-
-
+    displayLives();
 }
-
 
 //console.log(computerPlay());

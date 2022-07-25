@@ -57,7 +57,7 @@ body {
     padding: 15px 0 15px 0;
 }
 
-.section-info {
+.section-info, .c-section-info {
     border: 2px solid #677798;
     border-radius: 4px;
     box-shadow: 3px 3px #354458;
@@ -78,15 +78,30 @@ img {
 }
 
 
-.section-info:hover {
+.section-info:hover, .c-section-info:hover {
     transform: scale(1.05);
     background-color: #ced0d8df;
 }
 
-.section-info:active {
-    background-color: #c88989;
+.section-info:active, .c-section-info:active {
     color: white;
     transform: translateY(4px);
     box-shadow: 5px 5px #666;
+}
 
+.section-info:active {
+    background-color: #c88989;
+}
+
+.c-section-info:active {
+    background-color: rgb(164, 191, 232);
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: rgb(207, 207, 219);
+    margin-top: 40px;
+    font-size: 30px;
 }
